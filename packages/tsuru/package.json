@@ -59,6 +59,7 @@
   "dependencies": {
     "commander": "^12.1.0",
     "cosmiconfig": "^9.0.0",
+    "cosmiconfig-typescript-loader": "^6.1.0",
     "deepmerge": "^4.3.1",
     "es-toolkit": "^1.31.0",
     "execa": "^9.5.1",

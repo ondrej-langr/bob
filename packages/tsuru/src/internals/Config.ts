@@ -1,4 +1,5 @@
 import { cosmiconfig } from 'cosmiconfig';
+import { TypeScriptLoader } from 'cosmiconfig-typescript-loader';
 
 import { TSURU_FOLDER_NAME } from './constants.js';
 
@@ -25,6 +26,9 @@ export class Config {
     const configExplorer = cosmiconfig(cosmiconfigModuleName, {
       searchPlaces: cosmiconfigSearchPlaces,
       stopDir: projectRoot,
+      loaders: {
+        '.ts': TypeScriptLoader(),
+      },
     });
 
     const result = await configExplorer.search(projectRoot);

@@ -65,6 +65,9 @@ importers:
       cosmiconfig:
         specifier: ^9.0.0
         version: 9.0.0(typescript@5.5.2)
+      cosmiconfig-typescript-loader:
+        specifier: ^6.1.0
+        version: 6.1.0(@types/node@20.17.6)(cosmiconfig@9.0.0(typescript@5.5.2))(typescript@5.5.2)
       deepmerge:
         specifier: ^4.3.1
         version: 4.3.1
@@ -1421,6 +1424,14 @@ packages:
   core-js-compat@3.39.0:
     resolution: {integrity: sha512-VgEUx3VwlExr5no0tXlBt+silBvhTryPwCXRI2Id1PN8WTKu7MreethvddqOubrYxkFdv/RnYrqlv1sFNAUelw==}
 
+  cosmiconfig-typescript-loader@6.1.0:
+    resolution: {integrity: sha512-tJ1w35ZRUiM5FeTzT7DtYWAFFv37ZLqSRkGi2oeCK1gPhvaWjkAtfXvLmvE1pRfxxp9aQo6ba/Pvg1dKj05D4g==}
+    engines: {node: '>=v18'}
+    peerDependencies:
+      '@types/node': '*'
+      cosmiconfig: '>=9'
+      typescript: '>=5'
+
   cosmiconfig@9.0.0:
     resolution: {integrity: sha512-itvL5h8RETACmOTFc4UfIyB2RfEHi71Ax6E/PivVxq9NseKbOWpeyHEOIbmAw1rs8Ak0VursQNww7lf7YtUwzg==}
     engines: {node: '>=14'}
@@ -2474,6 +2485,10 @@ packages:
 
   javascript-natural-sort@0.7.1:
     resolution: {integrity: sha512-nO6jcEfZWQXDhOiBtG2KvKyEptz7RVbpGP4vTD2hLBdmNQSsCiicO2Ioinv6UI4y9ukqnBpy+XZ9H6uLNgJTlw==}
+
+  jiti@2.4.2:
+    resolution: {integrity: sha512-rg9zJN+G4n2nfJl5MW3BMygZX56zKPNVEYYqq7adpmMh4Jn2QNEwhvQlFy6jPVdcod7txZtKHWnyZiA3a0zP7A==}
+    hasBin: true
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -5422,6 +5437,13 @@ snapshots:
     dependencies:
       browserslist: 4.24.2
 
+  cosmiconfig-typescript-loader@6.1.0(@types/node@20.17.6)(cosmiconfig@9.0.0(typescript@5.5.2))(typescript@5.5.2):
+    dependencies:
+      '@types/node': 20.17.6
+      cosmiconfig: 9.0.0(typescript@5.5.2)
+      jiti: 2.4.2
+      typescript: 5.5.2
+
   cosmiconfig@9.0.0(typescript@5.5.2):
     dependencies:
       env-paths: 2.2.1
@@ -6672,6 +6694,8 @@ snapshots:
       '@pkgjs/parseargs': 0.11.0
 
   javascript-natural-sort@0.7.1: {}
+
+  jiti@2.4.2: {}
 
   js-tokens@4.0.0: {}
 
